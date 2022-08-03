@@ -1,0 +1,142 @@
+/* ----------------- Стиль для карточек портфолио */
+
+.portfolio__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio__item {
+  position: relative;
+  width: 370px;
+}
+
+.portfolio__link {
+  display: flex;
+  flex-direction: column;
+  width: 370px;
+  cursor: pointer;
+
+  transition: box-shadow 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+}
+
+
+
+.portfolio__img {
+  display: block;
+  overflow: hidden;
+}
+
+.portfolio__link-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__hover-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(calc(100% + 1px));
+
+  transition: opacity 250ms var(--timing-function), transform 250ms var(--timing-function);
+
+  .portfolio__link:hover &,
+  .portfolio__link:focus & {
+  transform: translateY(0);
+}
+}
+
+
+
+.portfolio__item-text-area {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-border-color);
+  border-top: none;
+}
+
+.portfolio__hover-text {
+  text-align: center;
+  color: var(--white-color);
+
+  font-family: var(--main-font);
+  font-size: 18px;
+  line-height: 1.56;
+  text-decoration: none;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.portfolio__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  color: var(--title-text-color);
+}
+
+.portfolio__text {
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--main-text-color);
+}
+
+/* ----------------- фильтр для портфолио */
+
+.portfolio__radio-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.portfolio__radio-button {
+  background-color: var(--filter-background-color);
+  color: var(--title-text-color);
+
+  padding: 6px 22px;
+
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  border-color: var(--filter-background-color);
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+
+  &.active {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+
+  &:hover,
+  &:focus {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+
