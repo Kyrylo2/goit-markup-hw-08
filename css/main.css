@@ -1311,6 +1311,7 @@ body.modal-open {
   }
   .header__mobile-menu-container.is-open {
     display: block;
+    z-index: 1;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1200px) {
