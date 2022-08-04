@@ -11,5 +11,10 @@
 
 		mobileMenuRef.classList.toggle('is-open');
 		mobileMenuLogo.classList.toggle('hidden');
+
+		
+		document.body.classList.toggle('modal-open');
+		
+		
 	});
 })();
