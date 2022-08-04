@@ -10,21 +10,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    // margin: 0;
   }
 }
 
 
 /* ----------------- стиль для меню навигации */
+
 .header__navbar {
   display: flex;
   align-items: center;
+
+
+  @media screen and (min-width: 768px) {
+  gap:88px;
+
+  }
+
+  @media screen and (min-width: 1200px) {
+
   gap: 94px;
+  }
 }
 
-.header__list {
-  display: flex;
-  gap: 50px;
 
+.header__list {
+
+  display: none;
+
+
+  @media screen and (min-width: 768px) {
+
+  display: flex;
+  // gap: 50px;
+  
 
   & .header__item {
     position: relative;
@@ -70,33 +89,74 @@
   & .header__link.header__current-link::after {
     opacity: 1;
   }
+}
 
+@media screen and (min-width: 768px) {
+  display: flex;
+  gap: 50px;
+}
 }
 
 .header__contacts {
-  display: flex;
-  margin-left: auto;
-  gap: 50px;
+  display: none;
 
-  & .header__contacts-link {
+  @media screen and (min-width: 768px) {
     display: flex;
-    align-items: center;
+    
+
     gap: 10px;
-    color: var(--main-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    padding: 32px 0;
-    transition: color 250ms var(--timing-function);
+    flex-direction: column;
+
+    & .header__contacts-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--main-text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      // ----------
+      transition: color 250ms var(--timing-function);
+    }
+
+    & .header__contacts-link:hover,
+    & .header__contacts-link:focus {
+      color: var(--blue-color);
+    }
+
+    & .header__contacts-icon {
+      fill: currentColor;
+    }
   }
 
-  & .header__contacts-link:hover,
-  & .header__contacts-link:focus {
-    color: var(--blue-color);
-  }
 
-  & .header__contacts-icon {
-    fill: currentColor;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 50px;
+
+    & .header__contacts-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--main-text-color);
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      padding: 32px 0;
+      transition: color 250ms var(--timing-function);
+    }
+
+    & .header__contacts-link:hover,
+    & .header__contacts-link:focus {
+      color: var(--blue-color);
+    }
+
+    & .header__contacts-icon {
+      fill: currentColor;
+    }
   }
 }

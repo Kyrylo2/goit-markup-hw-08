@@ -1,12 +1,53 @@
 /* ----------------- Footer */
 
+
+
 .footer {
   background-color: var(--footer-background-color);
   padding: 60px 0;
 
   & .container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 1199px){
+      gap:50px;
+    }
+    
+    // align-items: baseline;
+
+    @media screen and (min-width: 768px) and (max-width:1199px) {
+    width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: baseline;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+      flex-direction: row;
+    align-items: baseline;
+    
+    }
+  }
+
+  &__logo-contacts-container {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1200px){
+      align-items: center;
+    }
+    
+  }
+
+  &__contacts-container {
+    @media screen and (max-width: 1200px){
+      text-align: center;
+    }
+    
   }
 
   &__contacts {
@@ -21,6 +62,18 @@
     font-style: normal;
 
     transition: color 250ms var(--timing-function);
+
+    // @media screen and (min-width: 1200px){
+    //   display: flex;
+    // flex-direction: column;
+    // gap: 9px;
+    // margin-top: 20px;
+    // text-decoration: none;
+    // line-height: 1.71;
+    // font-style: normal;
+    // transition: color 250ms var(--timing-function);
+      
+    
   }
 
   &__adress {
@@ -33,17 +86,23 @@
     transition: color 250ms var(--timing-function);
   }
 
-  &__address:hover,
+  &__adress:hover,
   &__mail:hover,
   &__tel:hover,
-  &__address:focus,
+  &__adress:focus,
   &__mail:focus,
   &__tel:focus {
     color: var(--blue-color);
   }
 
   &__social-block {
-    margin-left: 70px;
+
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+      margin-left: 70px;
+    }
+    
   }
 
   &__icons-social {
@@ -74,6 +133,10 @@
   }
 
   &__social-title {
+    @media screen and (max-width: 1200px){
+      text-align: center;
+    }
+
     margin-bottom: 20px;
     font-weight: 700;
     line-height: 1.14;

@@ -1,15 +1,23 @@
 /* ----------------- стиль для Постоянные клиенты */
 
+
+
 .clients {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
 
 }
 
+.clients__item {
+  // flex-basis: calc((100% - 1 * 30px) / 2);
+}
+
 .clients__link {
-  width: 170px;
+  width: 210px;
   height: 90px;
 
   color: var(--light-gray-color);
@@ -26,6 +34,16 @@
   &:focus {
     color: var(--blue-color);
     border-color: var(--blue-color);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 220px;
+    height: 90px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  height: 90px;
   }
 
 }

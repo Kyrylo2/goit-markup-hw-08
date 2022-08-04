@@ -1,12 +1,31 @@
 /* ----------------- стиль форм */
 
 .footer__subscribe-form {
-  margin-left: auto;
+  @media screen and (max-width: 1199px){
+    width: 100%;
+  }
+  
+
+  @media screen and (min-width: 1200px){
+    margin-left: auto;
+  }
+  
 }
 
 .footer__signup-form {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
+  gap: 20px;
+
+  
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px){
+    gap: 20px;
+    flex-direction: row;
+  }
 
   & input:focus {
     border: 1px solid var(--blue-color);
@@ -15,7 +34,16 @@
 
 .footer__email-input {
   height: 50px;
+  width: 100%;   
+
+  @media screen and (min-width: 768px){
+    width: 450px;
+  }
+
+
+  @media screen and (min-width: 1200px){
   width: 358px;
+}
 
   font-size: 16px;
   line-height: 1.25;
