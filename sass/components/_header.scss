@@ -1,7 +1,7 @@
 /* ----------------- Стиль хедера */
 
 .header {
-	position: relative;
+	// position: relative;
 	border-bottom: 1px solid #ececec;
 	display: flex;
 	height: 80px;
@@ -48,9 +48,9 @@
     flex-direction: column;
     gap: 32px;
     align-items: flex-start;
-    padding-left: 40px;
-    top: -32px;
-    position: absolute;
+    // padding-left: 40px;
+    // top: -32px;
+    // position: absolute;
 		}
 
 		// font-weight: 500;
@@ -146,9 +146,9 @@
     flex-direction: column-reverse;
     gap: 32px;
     align-items: flex-start;
-    padding-left: 40px;
-    top: 522px;
-    position: absolute;
+    // padding-left: 40px;
+    // top: 522px;
+    // position: absolute;
 
 		& .header__contacts-icon {
 			display: none;
@@ -239,10 +239,11 @@
 	display: none;
 
 	@media screen and (max-width: 768px){
-		position: absolute;
+		// position: absolute;
 		display: flex;
-		padding-left: 40px;
-    top: 666px;
+		flex-wrap: wrap;
+		// padding-left: 40px;
+    // top: 666px;
     
 	& .mobile-social-link {
 		font-weight: 500;

@@ -39,6 +39,7 @@
     padding: 25px 0;
     background-color: var(--filter-background-color);
     margin-bottom: 30px;
+    border-radius: 4px;
   }
 
   &__title {
@@ -48,6 +49,7 @@
     text-transform: uppercase;
     color: var(--title-text-color);
     margin-bottom: 10px;
+    text-align: center;
 
   }
 
