@@ -1,23 +1,17 @@
 /* ----------------- Стиль хедера */
 
 .header {
-	// position: relative;
 	border-bottom: 1px solid #ececec;
 	display: flex;
 	height: 80px;
 
 	& .container {
-		// display: flex;
-		// justify-content: space-between;
-		// align-items: center;
-
-		@media screen and (max-width: 768px) {
+	
+		@media screen and (max-width: 767.5px) {
 			width: 100%;
 		}
-		// margin: 0;
 	}
 }
-
 
 /* ----------------- стиль для меню навигации */
 
@@ -26,7 +20,7 @@
 	align-items: center;
 	height: 100%;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767.5px) {
 		width: 100%;
 		justify-content: space-between;
 	}
@@ -43,21 +37,13 @@
 .header__list {
 		display: flex;
 
-		@media screen and (max-width:768px){
+		@media screen and (max-width:767.5px){
 			
     flex-direction: column;
     gap: 32px;
     align-items: flex-start;
-    // padding-left: 40px;
-    // top: -32px;
-    // position: absolute;
+    
 		}
-
-		// font-weight: 500;
-		// font-size: 40px;
-		// line-height: 1.175;
-		// letter-spacing: 0.02em;
-		// color: var(--title-text-color);
 
 		& .header__link {
 			font-weight: 500;
@@ -89,21 +75,14 @@
 		}
 
 		& .header__link {
-			// font-weight: 500;
 			font-size: 14px;
 			line-height: 1.14;
-			// letter-spacing: 0.02em;
-			// color: var(--title-text-color);
-			// text-decoration: none;
+
 			padding: 32px 0;
 
 			transition: color 250ms var(--timing-function);
 		}
 
-		// & .header__link:hover,
-		// & .header__link:focus {
-		// 	color: var(--blue-color);
-		// }
 
 		& .header__link::after {
 			position: absolute;
@@ -127,28 +106,16 @@
 		}
 	}
 
-	// @media screen and (min-width: 768px) {
-	// 	display: flex;
-		
-	// }
-
-	// @media screen and (min-width: 1200px) {
-	// 	display: flex;
-	// 	gap: 50px;
-	// }
 }
 
 .header__contacts {
 	display: flex;
 
-	@media screen and (max-width:767px){
+	@media screen and (max-width:767.5px){
 			
     flex-direction: column-reverse;
     gap: 32px;
     align-items: flex-start;
-    // padding-left: 40px;
-    // top: 522px;
-    // position: absolute;
 
 		& .header__contacts-icon {
 			display: none;
@@ -238,13 +205,10 @@
 .header__mobile-social-links {
 	display: none;
 
-	@media screen and (max-width: 768px){
-		// position: absolute;
+	@media screen and (max-width: 767.5px){
 		display: flex;
 		flex-wrap: wrap;
-		// padding-left: 40px;
-    // top: 666px;
-    
+  
 	& .mobile-social-link {
 		font-weight: 500;
 		font-size: 18px;
@@ -252,8 +216,7 @@
 		letter-spacing: 0.02em;
 
 		color: var(--blue-color);
-
-		
+	
 	}	
 
 	& li:not(:first-child) {

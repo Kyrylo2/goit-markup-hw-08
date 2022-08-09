@@ -163,6 +163,7 @@ body.modal-open {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 101;
   }
 }
 
@@ -317,10 +318,16 @@ body.modal-open {
   justify-content: center;
   align-items: center;
   font-family: var(--main-font);
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   margin-top: 10px;
   margin-bottom: 30px;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .modal__checkbox-terms {
+    line-height: 1.71;
+  }
 }
 
 .modal__checkbox-icon {
@@ -502,7 +509,7 @@ body.modal-open {
   display: flex;
   height: 80px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.5px) {
   .header .container {
     width: 100%;
   }
@@ -514,7 +521,7 @@ body.modal-open {
   align-items: center;
   height: 100%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.5px) {
   .header__navbar {
     width: 100%;
     justify-content: space-between;
@@ -534,7 +541,7 @@ body.modal-open {
 .header__list {
   display: flex;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.5px) {
   .header__list {
     flex-direction: column;
     gap: 32px;
@@ -595,7 +602,7 @@ body.modal-open {
 .header__contacts {
   display: flex;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
   .header__contacts {
     flex-direction: column-reverse;
     gap: 32px;
@@ -673,7 +680,7 @@ body.modal-open {
 .header__mobile-social-links {
   display: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.5px) {
   .header__mobile-social-links {
     display: flex;
     flex-wrap: wrap;
@@ -841,6 +848,11 @@ body.modal-open {
   color: var(--title-text-color);
   margin-bottom: 10px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantages__title {
+    text-align: left;
+  }
 }
 .advantages__text {
   color: var(--main-text-color);
@@ -1129,6 +1141,7 @@ body.modal-open {
 @media screen and (min-width: 768px) {
   .portfolio__radio-buttons {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1199,12 +1212,12 @@ body.modal-open {
   display: flex;
   flex-direction: column;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .footer__logo-contacts-container {
     align-items: center;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .footer__contacts-container {
     text-align: center;
   }
@@ -1264,7 +1277,7 @@ body.modal-open {
   text-transform: uppercase;
   color: var(--white-color);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .footer__social-title {
     text-align: center;
   }
@@ -1300,7 +1313,7 @@ body.modal-open {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
   .header__mobile-menu-container {
     position: absolute;
     display: flex;
@@ -1324,7 +1337,7 @@ body.modal-open {
     visibility: visible;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .header__mobile-menu-container {
     display: flex;
     align-items: center;
